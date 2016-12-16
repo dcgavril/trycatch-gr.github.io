@@ -1,0 +1,173 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: white;
+  background: lightgray;
+  text-align: center;
+  font-family: Arial,sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  opacity: 1;
+}
+
+.catch {
+  color: #ffa500;
+}
+
+.sidebar {
+  background: rgb(61, 79, 93);
+  position: absolute;
+  width: 250px;
+  height: 100%;
+}
+
+.content {
+  margin-left: 250px;
+  height: 100%;
+}
+
+.brand-title,
+.brand-tagline {
+  margin: 0;
+}
+.brand-title {
+  text-transform: uppercase;
+}
+.brand-tagline {
+  font-weight: 300;
+  opacity: 0.8;
+  margin-top: 0.2em;
+  margin-bottom: 4em;
+}
+
+.nodisplay {
+  display: none;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.tag {
+}
+
+ul.navlist {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 85%;
+}
+
+ul.navlist li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navlist li a {
+  cursor: pointer;
+  display: block;
+  width: auto;
+  margin-top: 0.5em;
+  padding: 0.4em 0 0.4em 0;
+  border-width: 0;
+  color: black;
+  opacity: 0.8;
+  text-decoration: none;
+  background: #eee;
+}
+ul.navlist li a:hover {
+  opacity: 1;
+}
+
+.button-primary {
+  color: black !important;
+  background: orange !important;
+}
+
+.button-secondary {
+  background: inherit !important;
+  color: white !important;
+}
+
+/* ------------------------ MODAL ------------------------ */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: gray;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 450px; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p, input {
+  text-align: left;
+  width: 100%;
+}
+
+.modal-content input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 4px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.modal-content input[type="text"]:focus,
+.modal-content input[type="text"].focus {
+  outline: none;
+  border: solid 1px #707070;
+  box-shadow: 0 0 2px 1px #969696;
+}
+
+.modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content  .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
