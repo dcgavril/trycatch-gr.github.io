@@ -74,16 +74,27 @@ $(document).ready(function() {
       event.preventDefault();
       event.stopPropagation();
       $.get('https://fruum.herokuapp.com/_/scrape?u=' + url).done(function(data) {
-        var body = '', thumbnail = data.thumbnail || data.image || '';
+        var body = '',
+            image = data.image || data.thumbnail || '',
+            thumbnail = data.thumbnail || data.image || '';
         if (data.summary && data.summary.length > 1000) {
           data.summary = data.summary.substr(0, 1000) + '...';
         }
+        if (image) {
+          body = '<img height="256" src="' + image + '"/>';
+          //body = '![image](' + image + ')\n\n';
+        }
+        if (data.description) {
+          body += '[' + data.description + '](' + url + ') |\n\n';
+        }
+        /*
         if (data.description && thumbnail) {
           body = '| <img width="200" src="' + thumbnail + '" /> | [' + data.description + '](' + url + ') |\n';
           body += '| ---- | ---- |\n\n';
         } else if (data.description) {
           body += data.description + '\n\n';
         }
+        */
         if (data.summary) {
           body += '*' + data.summary + '*\n\n';
         }
