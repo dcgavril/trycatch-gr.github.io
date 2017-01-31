@@ -81,11 +81,11 @@ $(document).ready(function() {
           data.summary = data.summary.substr(0, 1000) + '...';
         }
         if (image) {
-          body = '<img height="256" src="' + image + '"/>';
-          //body = '![image](' + image + ')\n\n';
+          //body = '<img height="256" src="' + image + '"/>';
+          body = '![image](' + image + ')\n\n';
         }
         if (data.description) {
-          body += '[' + data.description + '](' + url + ') |\n\n';
+          body += '[' + data.description + '](' + url + ')\n\n';
         }
         /*
         if (data.description && thumbnail) {
